@@ -1,0 +1,18 @@
+[profile.default]
+src = "src"
+test = "test"
+libs = ["lib"]
+solc = "0.8.24"
+optimizer = true
+optimizer_runs = 200
+
+remappings = [
+  "@chainlink/local/=lib/chainlink-local/",
+  '@chainlink/contracts-ccip/=lib/chainlink-ccip/chains/evm/',
+  "@chainlink/contracts/=lib/chainlink-evm/contracts/",
+  "@openzeppelin/=lib/openzeppelin-contracts/"
+]
+
+[rpc_endpoints]
+eth_mainnet = "${ETHEREUM_MAINNET_RPC_URL}"
+hyper_evm   = "${HYPEREVM_RPC_URL}"
